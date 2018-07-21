@@ -19,4 +19,3 @@ class YnabClient():
 
   def getBudgets(self):
     return self._getResource('budgets')
-
