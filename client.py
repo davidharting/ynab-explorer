@@ -8,8 +8,8 @@ class YnabClient():
       'Authorization': 'Bearer ' + token
     }
   
-  def _getResource(self, resource):
-    uri = self._api_url + resource
+  def _getResource(self, resource, id = ''):
+    uri = self._api_url + resource + id
     r = requests.get(uri, headers=self._headers)
     data = r.json()
     if (r.ok):
