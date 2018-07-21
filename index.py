@@ -1,9 +1,10 @@
-from client import get
+from client import YnabClient
+from secrets.token import token
 
 def main():
-  budgets = get('budgets')
+  client = YnabClient(token)
+  budgets = client.getBudgets()
   print(budgets)
-
 
 if __name__ == '__main__':
   main()
