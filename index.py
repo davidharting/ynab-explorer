@@ -1,8 +1,9 @@
-import requests
-from secrets.token import token
+from client import get
 
 def main():
-  print('token', token)
+  budgets = get('budgets')
+  print(budgets)
+
 
 if __name__ == '__main__':
   main()
