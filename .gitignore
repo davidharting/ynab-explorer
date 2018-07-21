@@ -1,0 +1,13 @@
+# Python environment / virtual environment
+bin/**/*
+include/**/*
+lib/**/*
+pip-selfcheck.json
+pyvenv.cfg
+
+# Runtime output
+**/__pycache__
+
+# Secrets
+secrets/token.py
+
