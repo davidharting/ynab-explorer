@@ -1,8 +1,0 @@
-# Alembic
-
-This directory contains database migrations.
-It was created with
-
-```bash
-alembic init alembic
-```
