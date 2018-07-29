@@ -10,4 +10,5 @@ pyvenv.cfg
 
 # Secrets
 secrets/token.py
+secrets/database.py
 
