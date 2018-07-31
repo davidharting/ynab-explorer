@@ -2,7 +2,7 @@ from __future__ import with_statement
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 from logging.config import fileConfig
-from secrets.database import config as db_config
+from secrets.database import connection_url
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -10,12 +10,7 @@ config = context.config
 
 # Override the connection URL from alembic.ini
 # driver://user:pass@localhost/dbname
-user = db_config['user']
-password = db_config['password']
-host = db_config['host']
-db_name = db_config['db_name']
-url = 'postgres://{}:{}@{}/{}'.format(user, password, host, db_name)
-config.set_main_option('sqlalchemy.url', url)
+config.set_main_option('sqlalchemy.url', connection_url)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.

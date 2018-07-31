@@ -20,11 +20,10 @@ In this directory, create a file called `database.py`.
 This will contain credentials and connection information for the Postgres instance to connect to.
 
 ```python
-config = {
-  'user': 'DB username',
-  'password': 'Password for user',
-  'host': 'Where is the database running? localhost?',
-  'db_name': 'Name of the database you are connecting to'
-}
-
+# Define these variables according to your environment
+user = ''
+password = ''
+host = '' # Probably localhost
+db_name = '' # Probably ynab
+connection_url = 'postgres://{}:{}@{}/{}'.format(user, password, host, db_name)
 ```
