@@ -24,6 +24,7 @@ def upgrade():
         sa.Column('amount', sa.Numeric, nullable=True),
         sa.Column('category', sa.String, nullable=True),
         sa.Column('payee', sa.String, nullable=True),
+        sa.Column('description', sa.String, nullable=True)
     )
 
 
