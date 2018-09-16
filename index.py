@@ -26,7 +26,6 @@ def main():
     for t in transactions:
       # TODO: Handle subtransactions
       # TODO: Add more date-related columns. Separate year, month, week of month, day of week etc. to allow for cool window functions
-      # TODO: Change datetime column to just a dateonly
       amount = t['amount'] / 100
       transaction = Transaction(id=t['id'], date=t['date'], amount=amount, category=t['category_name'], payee=t['payee_name'], description=t['memo'])
       session.add(transaction)
