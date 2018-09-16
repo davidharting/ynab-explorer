@@ -20,10 +20,10 @@ def upgrade():
     op.create_table(
         'transactions',
         sa.Column('id', sa.String, primary_key=True),
-        sa.Column('date', sa.DateTime, nullable=False),
-        sa.Column('amount', sa.Numeric, nullable=False),
-        sa.Column('category', sa.String, nullable=False),
-        sa.Column('payee', sa.String, nullable=False),
+        sa.Column('date', sa.DateTime, nullable=True),
+        sa.Column('amount', sa.Numeric, nullable=True),
+        sa.Column('category', sa.String, nullable=True),
+        sa.Column('payee', sa.String, nullable=True),
     )
 
 
