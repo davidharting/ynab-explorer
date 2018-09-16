@@ -11,6 +11,7 @@ class Transaction(Base):
   amount = Column(Numeric)
   category = Column(String)
   payee = Column(String)
+  description=Column(String)
 
   def __repr__(self):
     return '<Transaction date={} amount={} category={} payee={}>'.format(self.date, self.amount, self.category, self.payee)
